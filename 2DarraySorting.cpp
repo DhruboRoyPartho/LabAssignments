@@ -1,8 +1,12 @@
+//Author: Dhrubo Roy Partho
+//Date: 27-09-2023
+
 #include<bits/stdc++.h>
 using namespace std;
 
 #define ARR_SIZE 100
 int data[ARR_SIZE][ARR_SIZE], singleArray[ARR_SIZE*ARR_SIZE+1];
+
 
 void takeValue(int n)
 {
