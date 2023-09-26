@@ -4,10 +4,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ARR_SIZE 100
+#define ARR_SIZE 100       //Defining array size for declare array
 int data[ARR_SIZE][ARR_SIZE], singleArray[ARR_SIZE*ARR_SIZE+1];
 
-
+//Function for take input values
 void takeValue(int n)
 {
     for(int i=0;i<n;i++){
@@ -17,6 +17,7 @@ void takeValue(int n)
     }
 }
 
+//Function for display 2D array
 void display2D(int n)
 {
     for(int i=0;i<n;i++){
@@ -36,7 +37,7 @@ void sort2D(int n)
             l++;
         }
     }
-    sort(singleArray, singleArray+(n*n)); // here you can make own sorting system.i used built-in sort for simplicity.
+    sort(singleArray, singleArray+(n*n)); // here you can make own sorting system.such as, bubble, selection, insertion, merge, quick etc. sorts. i used built-in sort for simplicity.
     // for(int i=0;i<n*n;i++){
     //     cout<<singleArray[i]<<" ";
     // }
