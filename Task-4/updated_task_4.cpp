@@ -5,6 +5,7 @@
 #include<iostream>
 using namespace std;
 
+//Merge Sort functions start
 int merge(int arr[], int l, int mid, int r)
 {
     int n1 = mid - l + 1;
@@ -51,6 +52,7 @@ void mergeSort(int arr[], int l, int r)
     }
 
 }
+//Merge Sort functions end
 
 void show_data(int arr[], int n)
 {
