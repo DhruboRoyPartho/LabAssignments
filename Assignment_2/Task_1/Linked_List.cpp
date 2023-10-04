@@ -131,6 +131,17 @@ void free_memory()
     return;
 }
 
+int calculate_length()
+{
+    Node* ptr = head;
+    int i=0;
+    while(ptr != NULL){
+        i++;
+        ptr = ptr->next;
+    }
+    return i;
+}
+
 int main()
 {
     while(1){
@@ -141,7 +152,8 @@ int main()
         cout<<"\t4. Insert at an index\n";
         cout<<"\t5. Delete element based on value\n";
         cout<<"\t6. Display data\n";
-        cout<<"\t7. Exit\n";
+        cout<<"\t7. Calculate Length\n";
+        cout<<"\t8. Exit\n";
         cout<<"Select> ";
         cin >> n;
         switch(n){
@@ -194,6 +206,11 @@ int main()
             }
 
             case 7:{
+                cout<<"Length: "<<calculate_length()<<endl;
+                break;
+            }
+
+            case 8:{
                 free_memory();
                 cout<<"Closing program.";
                 for(int i=0;i<4;i++){
