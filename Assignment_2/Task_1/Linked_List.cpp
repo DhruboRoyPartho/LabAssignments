@@ -1,3 +1,7 @@
+//Author: Dhrubo Roy Partho
+//Date: 11/10/2023
+//Outcome: learning linked list.
+
 #include<bits/stdc++.h>
 #include<windows.h>
 using namespace std;
@@ -64,6 +68,7 @@ void insertAtIndex(int value, int pos)
             }
             else if(ptr == tail){
                 prePtr->next = newNode;
+                newNode->next = tail;
             }
             else{
                 prePtr->next = newNode;
@@ -87,7 +92,13 @@ void deleteByValue(int value)
         return;
     }
     while(ptr != NULL){
-        if(ptr->data == value){
+        if(ptr == tail && ptr->data == value){
+            tail = prePtr;
+            tail->next = NULL;
+            free(ptr);
+            return;
+        }
+        else if(ptr->data == value && ptr != tail){
             prePtr->next = ptr->next;
             free(ptr);
             return;
