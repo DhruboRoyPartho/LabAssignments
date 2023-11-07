@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void selection_sort(int data[], int n)
+void selection_sort(int arr[], int n)
 {
     int i, j, min_idx;
  
